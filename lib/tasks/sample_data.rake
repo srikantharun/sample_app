@@ -1,5 +1,5 @@
 namespace :db do
-  desc "Fill database with sample data"
+  desc "Fill database with Modified data"
   task :populate => :environment do
     Rake::Task['db:reset'].invoke
     make_users
@@ -11,6 +11,7 @@ end
 def make_users
   admin = User.create!(:name => "Example User",
                        :email => "example@railstutorial.org",
+                       :phone => "0019942327"
                        :password => "foobar",
                        :password_confirmation => "foobar")
   admin.toggle!(:admin)
