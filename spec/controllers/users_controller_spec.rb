@@ -282,7 +282,7 @@ describe UsersController do
       @user = Factory(:user)
     end
 
-    describe "for non-signed-in users" do
+    describe "for all non-signed-in users" do
 
       it "should deny access to 'edit'" do
         get :edit, :id => @user
